@@ -2,7 +2,7 @@
 
 cd /var/www
 rm -rf micropowermanager
-git clone https://github.com/rohitwebstep/micropowermanager.git
+git clone https://github.com/ajaymehra786/micropowermanager.git
 cd micropowermanager
 cd backend
 sudo cp .env.example .env
@@ -28,7 +28,7 @@ sudo journalctl -u micropowermanager.service -f
 cd ../frontend
 sudo cp .env.example .env
 
---- STEP 1 ---
+--- STEP 2 ---
 npm install
 
 --- STEP 3 ---
