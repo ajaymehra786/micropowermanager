@@ -1,3 +1,5 @@
+------------- Backend Deploy
+
 cd /var/www
 rm -rf micropowermanager
 git clone https://github.com/rohitwebstep/micropowermanager.git
@@ -14,14 +16,22 @@ sudo systemctl daemon-reload
 sudo systemctl enable micropowermanager.service
 sudo systemctl start micropowermanager.service
 
+
+------------- Backend logs
+
 sudo journalctl -u micropowermanager.service -f
 
 
-------------- frontend
+------------- Frontend Deploy
 
+--- STEP 1 ---
 cd ../frontend
 sudo cp .env.example .env
+
+--- STEP 1 ---
 npm install
+
+--- STEP 3 ---
 pm2 stop micropower-frontend
 pm2 delete micropower-frontend
 pm2 start "npm run serve -- --port 8001" --name micropower-frontend
